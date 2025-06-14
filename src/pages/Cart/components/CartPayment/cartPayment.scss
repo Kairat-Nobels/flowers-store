@@ -1,0 +1,164 @@
+@import "../../../../vendors/mixins";
+@import "../../../../vendors/variables";
+
+.cart-payment {
+    min-height: 100vh;
+    .row {
+        gap: 0;
+    }
+    .card-registration {
+        background: #e9a8b6;
+        border-radius: 18px;
+        box-shadow: 0 6px 32px rgba(0, 0, 0, 0.18);
+        border: none;
+    }
+
+    .card-body {
+        padding: 0;
+    }
+
+    .cart-head {
+        border-bottom: 1px solid #333a;
+        padding-bottom: 20px;
+        color: #fff;
+    }
+
+    .cart-products {
+        height: 400px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-top: 20px;
+        background: transparent;
+        color: #fff;
+    }
+    .left-cart {
+        border-right: 2px solid rgba(255, 255, 255, 0.667);
+    }
+    .empty {
+        color: #aaa;
+        height: 400px;
+    }
+
+    .back-shop {
+        a {
+            text-decoration: none;
+            color: lighten($main-color, 30%);
+            ;
+            font-weight: 500;
+            transition: color 0.18s;
+            &:hover {
+                color: lighten($main-color, 10%);
+            }
+        }
+    }
+
+    .bg-grey {
+        background: #e9a8b6 !important;
+        border-radius: 16px;
+        color: #fff;
+    }
+
+    .form-label, .form-check-label {
+        color: #fff;
+        font-weight: 500;
+    }
+    .form-control, .input-group .form-control {
+        background: #fff;
+        color: #181c22;
+        border: 1.5px solid $main-color;
+        border-radius: 10px;
+        padding: 10px 14px;
+        font-size: 16px;
+        transition: border 0.2s;
+        &:focus {
+            border-color: darken($main-color, 10%);
+            box-shadow: 0 0 0 2px rgba($main-color, 0.15);
+        }
+    }
+    .input-group .btn,
+    .btn-outline-secondary {
+        border-radius: 10px;
+        background: #23272f;
+        color: $main-color;
+        border: 1px solid $main-color;
+        font-weight: 500;
+        transition: background 0.2s, color 0.2s;
+        &:hover, &:focus {
+            background: $main-color;
+            color: #fff;
+        }
+    }
+
+    .general-button, button[type="submit"] {
+        background: $main-color;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 12px 0;
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 18px;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 12px rgba($main-color, 0.10);
+        &:hover, &:focus {
+            background: lighten($main-color, 8%);
+            color: #fff;
+        }
+        &:disabled {
+            background: #444 !important;
+            color: #aaa !important;
+            cursor: not-allowed !important;
+            opacity: 0.7;
+        }
+    }
+
+    .text-muted {
+        color: #413a36 !important;
+    }
+    .text-black, h1, h3, h4, h5, h6 {
+        color: #fff !important;
+    }
+    .text-success {
+        color: #00c853 !important;
+    }
+    .text-danger {
+        color: #ff5252 !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .cart-payment {
+        padding: 20px 0;
+        .card-registration {
+            border-radius: 10px;
+        }
+        .bg-grey {
+            border-radius: 10px !important;
+        }
+    }
+}
+
+.cart-trash {
+    background: none;
+    font-size: 24px;
+}
+.quantity-button {
+    background: #FFF;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    color: $main-color;
+    font-size: 20px;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+        color: lighten($main-color, 10%);
+    }
+}

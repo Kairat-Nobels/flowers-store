@@ -1,0 +1,90 @@
+@import "../../../../vendors/mixins";
+@import "../../../../vendors/variables";
+
+.hero {
+    position: relative;
+
+    .hero-content {
+        position: relative;
+        height: 650px;
+        background-image: url(https://florist-ecommerce-app.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcover2.7bca7dbc.jpg&w=3840&q=20);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 80px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        overflow: hidden;
+
+        // overlay
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(44, 62, 80, 0.45);
+            z-index: 0;
+        }
+
+        >* {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 24px;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+
+            @media(max-width: 922px) {
+                font-size: 2.5rem;
+            }
+
+            @media(max-width: 544px) {
+                font-size: 1.7rem;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #fff;
+            max-width: 600px;
+            text-align: center;
+            margin: 0 auto 32px auto;
+            line-height: 1.5;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+
+            @media(max-width: 544px) {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+        }
+
+        .general-button {
+            margin-top: 0;
+            padding: 14px 36px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            border: none;
+            background: #f5c6aa;
+            color: #fff;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: background 0.2s, color 0.2s;
+
+            &:hover {
+                background: #fff;
+                color: #f5c6aa;
+                border: 1px solid #f5c6aa;
+            }
+        }
+    }
+}

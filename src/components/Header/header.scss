@@ -1,0 +1,150 @@
+@import "../../vendors/mixins";
+@import "../../vendors/variables";
+
+header {
+    .header-container {
+        padding: 0 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    background-color: #f5c6aa;
+    .mobile-nav {
+        overflow: hidden;
+        height: 0;
+
+        @media(min-width: 922px) {
+            display: none;
+        }
+
+        li {
+            button {
+                display: flex;
+                width: 100%;
+                padding: 0 20px;
+                font-size: 18px;
+                line-height: 3;
+                border: 1px solid #0b0b0b;
+                text-decoration: none;
+                color: #ffffff;
+            }
+        }
+
+    }
+    .dekstop-nav {
+        color: #ffffff;
+    }
+    .open-nav {
+        height: 200px;
+    }
+
+    .header-content {
+        @include flexBetween;
+        padding: 14px 0;
+
+        @media(max-width: 922px) {
+            padding-bottom: 0 !important;
+        }
+
+        .header-left {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+
+            ul {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+
+                @media(max-width: 922px) {
+                    display: none;
+                }
+
+                li {
+                    font-size: 18px;
+                    a {
+                        text-decoration: none;
+                        color: #ffffff;
+                    }
+                }
+            }
+            .logo-part {
+                a {
+                    text-decoration: none;
+                    color: #ffffff;
+                    font-size: 24px;
+                    font-weight: 600;
+
+                    @media(max-width: 922px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            p {
+                font-size: 16px;
+                margin: 0;
+                color: #fff;
+                font-weight: 600;
+            }
+
+            .cart {
+                position: relative;
+                height: 35px;
+                width: 35px;
+
+                svg {
+                    @include imageCover;
+                    fill: #fff;
+                }
+
+                p {
+                    position: absolute;
+                    right: -16px;
+                    top: -8px;
+                    background-color: #e9a8b6;
+                    color: black;
+                    font-weight: bold;
+                    width: 24px;
+                    height: 24px;
+                    @include flexCenter;
+                    border-radius: 50%;
+                    font-size: 18px;
+                }
+            }
+
+            .hamburger-menu {
+                margin-left: 8px;
+
+                @media(min-width: 922px) {
+                    display: none;
+                }
+
+                button {
+                    background: transparent;
+                    border: 0;
+                    outline: 0;
+                    color: $main-color;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .admin-button {
+        background: #ffffff;
+        font-size: 20px;
+        margin-right: 20px;
+        padding: 8px 20px;
+        border-radius: 10px;
+    }
+}
