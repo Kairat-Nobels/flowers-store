@@ -29,6 +29,7 @@ const ItemModalForm = ({ open, onClose, itemData }) => {
         category: itemData.category || "",
         content: itemData.content || "",
         price: itemData.price || "",
+        oldPrice: itemData.oldPrice || "",
       });
       setImgUrl(itemData.image || "");
     } else {
@@ -121,6 +122,10 @@ const ItemModalForm = ({ open, onClose, itemData }) => {
           <Form.Group>
             <Form.ControlLabel>Цена (сом):</Form.ControlLabel>
             <Form.Control name="price" type="number" />
+          </Form.Group>
+          <Form.Group>
+            <Form.ControlLabel>Старая цена (сом):</Form.ControlLabel>
+            <Form.Control name="oldPrice" type="number" />
           </Form.Group>
         </Form>
       </Modal.Body>

@@ -38,6 +38,12 @@ const ItemsTable = ({ data, onEdit, onDelete }) => {
       </Table.Column>
 
       <Table.Column width={100}>
+        <Table.HeaderCell>Старая цена</Table.HeaderCell>
+        <Table.Cell>
+          {(rowData) => rowData?.oldPrice ? rowData?.oldPrice + ' сом' : '-----'}
+        </Table.Cell>
+      </Table.Column>
+      <Table.Column width={100}>
         <Table.HeaderCell>Цена</Table.HeaderCell>
         <Table.Cell>
           {(rowData) => rowData.price + ' сом'}

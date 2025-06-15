@@ -49,8 +49,6 @@ const Header = () => {
         return total;
     };
     const changeCategory = (categoryName) => {
-        console.log(categoryName);
-
         dispatch(setCategory(categoryName));
         navigate('/shop');
     }

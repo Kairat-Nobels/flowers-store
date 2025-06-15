@@ -130,7 +130,6 @@ const ordersSlice = createSlice({
         builder.addCase(deleteOrder.fulfilled, (state, action) => {
             state.delLoading = false;
             state.delMessage = action.payload;
-            console.log(action.payload);
 
             state.orders = state.orders.filter(doc => doc.id !== action.payload);
             toast.success("Успешно удалено");

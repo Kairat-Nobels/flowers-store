@@ -136,13 +136,35 @@
 }
 
 .product-page {
+    .row {
+        display: flex !important;
+    }
     h6 a {
         color: $main-color;
+    }
+    .flexible {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .product-image {
+        margin-top: 20px;
+        max-height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        img {
+            transform: scale(0.8);
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
     }
     .product-info {
         h2 {
             margin-bottom: 20px;
-            color: white;
+            color: $main-color;
         }
         del {
             opacity: 0.57;
@@ -159,7 +181,7 @@
         p {
             margin-bottom: 20px;
             font-size: 16px;
-            color: white;
+            color: $main-color;
         }
         h3 {
             margin-bottom: 0.5em;
@@ -174,12 +196,12 @@
         .product-prices {
             display: flex;
             align-items: center;
-            color: #fff;
+            color: $pink-color;
             font-size: 16px;
             gap: 30px;
         }
         .product-price {
-            color: #fff;
+            color: $pink-color;
             line-height: 1.3;
             font-weight: 700;
             font-size: 24px;
